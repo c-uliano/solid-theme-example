@@ -9,7 +9,7 @@
 }
 
 .header {
-  background-color: var(--stp-background);
+  background-color: var(--stp-background-dark_quaternary);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
