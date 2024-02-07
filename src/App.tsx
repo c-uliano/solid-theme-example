@@ -10,8 +10,8 @@ const App: Component = () => {
   const custom_variants = (name: string, value: string) => {
     let pattern = /^#[0-9A-F]{6}$/i;
     if (value.match(pattern)) {
-      const shades = generateShadeTints(value, (percent) => (1 - percent));
-      const tints = generateShadeTints(value, (percent) => percent);
+      const shades = generateColorVariants(value, (percent) => (1 - percent));
+      const tints = generateColorVariants(value, (percent) => percent);
   
       return {
         [`${name}-dark_primary`]: shades[0],
@@ -33,7 +33,7 @@ const App: Component = () => {
     return {};
   };
   
-  function generateShadeTints(hexColor: string, modifierFn: (percent: number) => number): string[] {
+  function generateColorVariants(hexColor: string, modifierFn: (percent: number) => number): string[] {
     const variants = [];
     for (let i = 1; i <= 8; i++) {
       const percent = i * 0.1;
