@@ -14,20 +14,22 @@ const App: Component = () => {
       const tints = generateColorVariants(value, (percent) => percent);
   
       return {
-        [`${name}-dark_primary`]: shades[0],
-        [`${name}-dark_secondary`]: shades[2],
-        [`${name}-dark_tertiary`]: shades[4],
-        [`${name}-dark_quaternary`]: shades[6],
+        [`${name}-dark_primary`]: shades[2],
+        [`${name}-dark_secondary`]: shades[4],
+        [`${name}-dark_tertiary`]: shades[6],
+        [`${name}-dark_quaternary`]: shades[8],
   
-        [`${name}-light_primary`]: tints[0],
-        [`${name}-light_secondary`]: tints[2],
-        [`${name}-light_tertiary`]: tints[4],
-        [`${name}-light_quaternary`]: tints[6],
+        [`${name}-light_primary`]: tints[2],
+        [`${name}-light_secondary`]: tints[4],
+        [`${name}-light_tertiary`]: tints[6],
+        [`${name}-light_quaternary`]: tints[8],
 
         [`${name}-alpha_primary`]: value + "f2", // 95%
         [`${name}-alpha_secondary`]: value + "99", // 60%
         [`${name}-alpha_tertiary`]: value + "4d", // 30%
+        // allow for mispelled 'quarternary' for backwards compatibility
         [`${name}-alpha_quaternary`]: value + "17", // 9%
+        [name + "-alpha_quarternary"]: value + "17", // 9%
       };
     }
     return {};
