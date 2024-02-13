@@ -1,12 +1,49 @@
 .App {
-  text-align: center;
   background-color: var(--stp-background);
+  color: var(--stp-foreground);
+  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: var(--stp-foreground);
   padding: .5em;
+}
+
+.flexBox {
+  display: flex;
+  gap: 10px;
+  margin: 1em 0;
+}
+
+.boxOne, .boxTwo, .boxThree, .boxFour, .boxFive, .boxSix, .boxSeven, .boxEight {
+  width: 200px;
+  height: 200px;
+}
+
+.boxOne {
+  background-color: var(--stp-test_color-alpha_primary);
+}
+.boxTwo {
+  background-color: var(--stp-test_color-alpha_secondary);
+}
+.boxThree {
+  background-color: var(--stp-test_color-alpha_tertiary);
+}
+.boxFour {
+  background-color: var(--stp-test_color-alpha_quaternary);
+}
+
+.boxFive {
+  background-color: var(--stp-test_color_two);
+}
+.boxSix {
+  background-color: var(--stp-test_color_two-dark);
+}
+.boxSeven {
+  background-color: var(--stp-test_color_two-light);
+}
+.boxEight {
+  background-color: var(--stp-test_color_two);
 }

@@ -14,7 +14,9 @@
                 "background_active": "#2b1d1c",
                 "foreground": "#ddddcc",
                 "foreground_muted": "#999988",
-                "button_radius": "0.5em"
+                "button_radius": "0.5em",
+                "test_color": "#13678A",
+                "test_color_two": "#2B8C44"
             }
         },
         "light": {
@@ -27,7 +29,9 @@
                 "background_active": "#f1efe5",
                 "foreground": "#111100",
                 "foreground_muted": "#777755",
-                "button_radius": "0.5em"
+                "button_radius": "0.5em",
+                "test_color": "#13678A",
+                "test_color_two": "#2B8C44"
             }
         }
     }
