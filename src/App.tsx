@@ -6,10 +6,6 @@ import styles from './App.module.css';
 
 const App: Component = () => {
 
-
-
-
-
   const custom_variants = (name: string, value: string) => {
     const pattern = /^#[0-9A-F]{6}$/i;
     if (!value.match(pattern)) return {};
@@ -46,12 +42,14 @@ const App: Component = () => {
       [name + "-alpha_secondary"]: value + "99", // 60%
       [name + "-alpha_tertiary"]: value + "4d", // 30%
       [name + "-alpha_quaternary"]: value + "17", // 9%
-      [name + "-dark1"]: darkHex[0],
-      [name + "-dark2"]: darkHex[1],
-      [name + "-dark3"]: darkHex[2],
-      [name + "-light1"]: lightHex[0],
-      [name + "-light2"]: lightHex[1],
-      [name + "-light3"]: lightHex[2]
+      // allow for mispelled 'quarternary' for backwards compatibility
+      [name + "-alpha_quarternary"]: value + "17", // 9%
+      [name + "-dark30"]: darkHex[0], // 30% darker
+      [name + "-dark50"]: darkHex[1], // 50% darker
+      [name + "-dark70"]: darkHex[2], // 70% darker
+      [name + "-light30"]: lightHex[0], // 30% lighter
+      [name + "-light50"]: lightHex[1], // 50% lighter
+      [name + "-light70"]: lightHex[2] // 70% lighter
     };
   };
   
@@ -114,13 +112,6 @@ const App: Component = () => {
   const rgbToHex = (r: number, g: number, b: number): string => {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
   }
-  
-  
-
-
-
-
-
 
   return (
     <div class={styles.App}>
