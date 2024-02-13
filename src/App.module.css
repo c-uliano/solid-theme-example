@@ -17,7 +17,7 @@
   margin: 1em 0;
 }
 
-.boxOne, .boxTwo, .boxThree, .boxFour, .boxFive, .boxSix, .boxSeven, .boxEight {
+.boxOne, .boxTwo, .boxThree, .boxFour, .boxFive, .boxSix, .boxSeven, .boxEight, .boxNine, .boxTen, .boxEleven, .boxTwelve, .box13, .box14, .box15, .box16, .box17, .box18, .box19, .box20 {
   width: 200px;
   height: 200px;
 }
@@ -39,11 +39,50 @@
   background-color: var(--stp-test_color_two);
 }
 .boxSix {
-  background-color: var(--stp-test_color_two-dark);
+  background-color: var(--stp-test_color_two-dark1);
 }
 .boxSeven {
-  background-color: var(--stp-test_color_two-light);
+  background-color: var(--stp-test_color_two-dark2);
 }
 .boxEight {
+  background-color: var(--stp-test_color_two-dark3);
+}
+
+.boxNine {
+  background-color: var(--stp-test_color_three);
+}
+.boxTen {
+  background-color: var(--stp-test_color_three-light1);
+}
+.boxEleven {
+  background-color: var(--stp-test_color_three-light2);
+}
+.boxTwelve {
+  background-color: var(--stp-test_color_three-light3);
+}
+
+.box13 {
   background-color: var(--stp-test_color_two);
+}
+.box14 {
+  background-color: var(--stp-test_color_two-light1);
+}
+.box15 {
+  background-color: var(--stp-test_color_two-light2);
+}
+.box16 {
+  background-color: var(--stp-test_color_two-light3);
+}
+
+.box17 {
+  background-color: var(--stp-test_color_three);
+}
+.box18 {
+  background-color: var(--stp-test_color_three-dark1);
+}
+.box19 {
+  background-color: var(--stp-test_color_three-dark2);
+}
+.box20 {
+  background-color: var(--stp-test_color_three-dark3);
 }
