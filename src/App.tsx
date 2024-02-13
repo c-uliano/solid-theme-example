@@ -11,8 +11,6 @@ const App: Component = () => {
 
 
   const custom_variants = (name: string, value: string) => {
-    // if the current value is a hex color
-    // add complementary transparencies
     const pattern = /^#[0-9A-F]{6}$/i;
     if (!value.match(pattern)) return {};
   
@@ -43,7 +41,6 @@ const App: Component = () => {
       return rgbToHex(lightRGB[0], lightRGB[1], lightRGB[2]);
     });
   
-    // Generate result object
     return {
       [name + "-alpha_primary"]: value + "f2", // 95%
       [name + "-alpha_secondary"]: value + "99", // 60%
@@ -59,20 +56,27 @@ const App: Component = () => {
   };
   
   // Converts RGB to HSL
-  function rgbToHsl(r: number, g: number, b: number): number[] {
+  const rgbToHsl = (r: number, g: number, b: number): number[] => {
+    let h = 0, s = 0, l = 0; // Initialize h, s, and l
     r /= 255, g /= 255, b /= 255;
     const max = Math.max(r, g, b), min = Math.min(r, g, b);
-    let h, s, l = (max + min) / 2;
+    l = (max + min) / 2;
   
     if (max === min) {
-      h = s = 0; // achromatic
+      h = s = 0;
     } else {
       const d = max - min;
       s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
       switch (max) {
-        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-        case g: h = (b - r) / d + 2; break;
-        case b: h = (r - g) / d + 4; break;
+        case r: 
+          h = (g - b) / d + (g < b ? 6 : 0); 
+          break;
+        case g: 
+          h = (b - r) / d + 2; 
+          break;
+        case b: 
+          h = (r - g) / d + 4; 
+          break;
       }
       h /= 6;
     }
@@ -81,11 +85,11 @@ const App: Component = () => {
   }
   
   // Converts HSL to RGB
-  function hslToRgb(h: number, s: number, l: number): number[] {
+  const hslToRgb = (h: number, s: number, l: number): number[] => {
     let r, g, b;
   
     if (s === 0) {
-      r = g = b = l; // achromatic
+      r = g = b = l;
     } else {
       const hue2rgb = (p: number, q: number, t: number) => {
         if (t < 0) t += 1;
@@ -107,7 +111,7 @@ const App: Component = () => {
   }
   
   // Converts RGB to hex
-  function rgbToHex(r: number, g: number, b: number): string {
+  const rgbToHex = (r: number, g: number, b: number): string => {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
   }
   
