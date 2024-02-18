@@ -13,22 +13,34 @@ const App: Component = () => {
     if (value.match(pattern)) {
 
         // store all shades and tints
-        const variants = {};
+        // * this is how you set the type for an object, and the type for the key and value
+        const variants: {[key: string]: string} = {};
+        // * or, you can use the Record utility type which does the same thing, for more info https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type
+        // const variants: Record<string, string> = {};
 
         // Create Values instance with the provided hex color value
         const colorValues = new Values(value);
 
-        // Generate tints and shades using Values.js
-        const tints = colorValues.tints(20).map((color, index) => ({
-            [`${name}-lighter_${(index + 1) * 20}`]: color.hexString(),
-        }));
-        const shades = colorValues.shades(20).map((color, index) => ({
-            [`${name}-darker_${(index + 1) * 20}`]: color.hexString(),
-        }));
+        // Generate tints and shades using Values.js and merge directly into variants
+        colorValues.tints(20).forEach((color, index) => {
+          variants[`${name}-lighter_${(index + 1) * 20}`] = color.hexString();
+        });
 
-        // Push tints and shades into the variants array
-        tints.forEach(tint => Object.assign(variants, tint));
-        shades.forEach(shade => Object.assign(variants, shade));
+        colorValues.shades(20).forEach((color, index) => {
+          variants[`${name}-darker_${(index + 1) * 20}`] = color.hexString();
+        });
+
+        // // Generate tints and shades using Values.js
+        // const tints = colorValues.tints(20).map((color, index) => ({
+        //     [`${name}-lighter_${(index + 1) * 20}`]: color.hexString(),
+        // }));
+        // const shades = colorValues.shades(20).map((color, index) => ({
+        //     [`${name}-darker_${(index + 1) * 20}`]: color.hexString(),
+        // }));
+
+        // // Push tints and shades into the variants array
+        // tints.forEach(tint => Object.assign(variants, tint));
+        // shades.forEach(shade => Object.assign(variants, shade));
 
         console.log(variants);
         // Return the variants object

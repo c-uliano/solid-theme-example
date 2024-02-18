@@ -17,7 +17,8 @@
                 "button_radius": "0.5em",
                 "test_color": "#13678A",
                 "test_color_two": "#2B8C44",
-                "test_color_three": "#D90D1E"
+                "test_color_three": "#D90D1E",
+                "hotPink" : "#ff69b4"
             }
         },
         "light": {
@@ -33,7 +34,8 @@
                 "button_radius": "0.5em",
                 "test_color": "#13678A",
                 "test_color_two": "#2B8C44",
-                "test_color_three": "#D90D1E"
+                "test_color_three": "#D90D1E",
+                "hotPink" : "#ff69b4"
             }
         }
     }

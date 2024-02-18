@@ -24,38 +24,38 @@
 }
 
 .one {
-  background-color: var(--stp-test_color_three);
+  background-color: var(--stp-hotPink);
 }
 
 .two {
-  background-color: var(--stp-test_color_three-lighter_20);
+  background-color: var(--stp-hotPink-lighter_20);
 }
 
 .three {
-  background-color: var(--stp-test_color_three-lighter_40);
+  background-color: var(--stp-hotPink-lighter_40);
 }
 
 .four {
-  background-color: var(--stp-test_color_three-lighter_60);
+  background-color: var(--stp-hotPink-lighter_60);
 }
 
 .five {
-  background-color: var(--stp-test_color_three-lighter_80);
+  background-color: var(--stp-hotPink-lighter_80);
 }
 
 .six {
-  background-color: var(--stp-test_color_three);
+  background-color: var(--stp-hotPink);
 }
 
 .seven {
-  background-color: var(--stp-test_color_three-darker_20);
+  background-color: var(--stp-hotPink-darker_20);
 }
 .eight {
-  background-color: var(--stp-test_color_three-darker_40);
+  background-color: var(--stp-hotPink-darker_40);
 }
 .nine {
-  background-color: var(--stp-test_color_three-darker_60);
+  background-color: var(--stp-hotPink-darker_60);
 }
 .ten {
-  background-color: var(--stp-test_color_three-darker_80);
+  background-color: var(--stp-hotPink-darker_80);
 }
