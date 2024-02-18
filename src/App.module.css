@@ -17,72 +17,45 @@
   margin: 1em 0;
 }
 
-.boxOne, .boxTwo, .boxThree, .boxFour, .boxFive, .boxSix, .boxSeven, .boxEight, .boxNine, .boxTen, .boxEleven, .boxTwelve, .box13, .box14, .box15, .box16, .box17, .box18, .box19, .box20 {
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten {
+  background-color: black;
   width: 200px;
   height: 200px;
 }
 
-.boxOne {
-  background-color: var(--stp-test_color-alpha_primary);
-}
-.boxTwo {
-  background-color: var(--stp-test_color-alpha_secondary);
-}
-.boxThree {
-  background-color: var(--stp-test_color-alpha_tertiary);
-}
-.boxFour {
-  background-color: var(--stp-test_color-alpha_quaternary);
-}
-
-.boxFive {
-  background-color: var(--stp-test_color_two);
-}
-.boxSix {
-  background-color: var(--stp-test_color_two-dark30);
-}
-.boxSeven {
-  background-color: var(--stp-test_color_two-dark50);
-}
-.boxEight {
-  background-color: var(--stp-test_color_two-dark70);
-}
-
-.boxNine {
+.one {
   background-color: var(--stp-test_color_three);
 }
-.boxTen {
-  background-color: var(--stp-test_color_three-light30);
-}
-.boxEleven {
-  background-color: var(--stp-test_color_three-light50);
-}
-.boxTwelve {
-  background-color: var(--stp-test_color_three-light70);
+
+.two {
+  background-color: var(--stp-test_color_three-lighter_20);
 }
 
-.box13 {
+.three {
+  background-color: var(--stp-test_color_three-lighter_40);
+}
+
+.four {
+  background-color: var(--stp-test_color_three-lighter_60);
+}
+
+.five {
+  background-color: var(--stp-test_color_three-lighter_80);
+}
+
+.six {
   background-color: var(--stp-test_color_three);
 }
-.box14 {
-  background-color: var(--stp-test_color_three-dark30);
-}
-.box15 {
-  background-color: var(--stp-test_color_three-dark50);
-}
-.box16 {
-  background-color: var(--stp-test_color_three-dark70);
-}
 
-.box17 {
-  background-color: var(--stp-test_color);
+.seven {
+  background-color: var(--stp-test_color_three-darker_20);
 }
-.box18 {
-  background-color: var(--stp-test_color-light30);
+.eight {
+  background-color: var(--stp-test_color_three-darker_40);
 }
-.box19 {
-  background-color: var(--stp-test_color-light50);
+.nine {
+  background-color: var(--stp-test_color_three-darker_60);
 }
-.box20 {
-  background-color: var(--stp-test_color-light70);
+.ten {
+  background-color: var(--stp-test_color_three-darker_80);
 }

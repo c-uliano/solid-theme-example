@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "solid-js": "^1.8.11",
-    "solid-theme-provider": "^0.9.1"
+    "solid-theme-provider": "^0.9.1",
+    "values.js": "^2.1.1"
   }
 }
