@@ -50,6 +50,51 @@ const App: Component = () => {
     return {};
 };
 
+// * customizing the solid-theme-provider, v3
+  // const custom_variants = (name: string, value: string) => {
+  //   let pattern = /^#[0-9A-F]{6}$/i;
+  //   if (value.match(pattern)) {
+
+  //     const variations = [];
+      
+  //     for (let i = 1; i <= 8; i++) {
+  //       const percent = i * 0.1;
+  //       const shade = generateColorVariation(value, percent, 'darker');
+  //       const tint = generateColorVariation(value, percent, 'lighter');
+        
+  //       variations.push({
+  //         [name + "-darker_" + (i * 10)]: shade,
+  //         [name + "-lighter_" + (i * 10)]: tint
+  //       });
+  //     }
+      
+  //     return Object.assign({}, ...variations);
+  //   }
+  //   return {};
+  // }
+
+  // const generateColorVariation = (hexColor: string, percent: number, operation: 'darker' | 'lighter') => {
+  //   const r = parseInt(hexColor.substring(1, 3), 16);
+  //   const g = parseInt(hexColor.substring(3, 5), 16);
+  //   const b = parseInt(hexColor.substring(5, 7), 16);
+
+  //   let newR: number, newG: number, newB: number;
+
+  //   if (operation === 'darker') {
+  //     newR = Math.floor(r * (1 - percent));
+  //     newG = Math.floor(g * (1 - percent));
+  //     newB = Math.floor(b * (1 - percent));
+  //   } else if (operation === 'lighter') {
+  //     newR = Math.floor(r + (255 - r) * percent);
+  //     newG = Math.floor(g + (255 - g) * percent);
+  //     newB = Math.floor(b + (255 - b) * percent);
+  //   }
+
+  //   const newHexColor = "#" + ((1 << 24) + (newR << 16) + (newG << 8) + newB).toString(16).slice(1);
+  //   return newHexColor;
+  // }
+  
+
   return (
     <div class={styles.App}>
       <header class={styles.header}>
